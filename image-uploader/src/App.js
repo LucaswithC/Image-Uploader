@@ -2,6 +2,7 @@ import "./ImageUpload.css";
 import React from "react";
 import imagePlaceholder from "./images/placeholder.svg";
 import Check from "./images/ok-1976099.svg";
+import config from "./config.js"
 
 class ImageUpload extends React.Component {
   constructor(props) {
@@ -145,7 +146,7 @@ class ImageUpload extends React.Component {
           )}
           {this.state.status === 2 && (
             <div>
-              <h6 className="back" state="0" onClick={this.changeState}><i class="fas fa-caret-left"></i> Back to Start</h6>
+              <h6 className="back" state="0" onClick={this.changeState}><i className="fas fa-caret-left"></i> Back to Start</h6>
               <img src={Check} alt="Checkmark" width="60px" />
               <h3>Uploaded Successfully!</h3>
               <img
