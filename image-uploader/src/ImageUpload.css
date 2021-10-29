@@ -3,6 +3,7 @@
   min-height: calc(100vh - 60px);
   padding: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #FAFAFB;
@@ -81,6 +82,7 @@ input:focus, input:active {
   white-space: nowrap;
   cursor: pointer;
   display: inline;
+  font-weight: 400;
 }
 
 #image-uploader {
@@ -135,6 +137,7 @@ progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value {
 
 #user-image {
   margin: 10px 0 20px;
+  border-radius: 12px;
 }
 
 #img-link {
@@ -145,4 +148,20 @@ progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value {
   padding: 3px;
   display: flex;
   justify-content: space-between;
+}
+
+.back {
+  width: 100%;
+  text-align: start;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+#error-message {
+  text-align: start;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(235, 0, 20);
+  background: rgba(235, 0, 20, 30%);
+  border-radius: 8px;
 }

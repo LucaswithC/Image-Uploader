@@ -8,7 +8,8 @@ class ImageUpload extends React.Component {
     super(props);
     this.state = {
       status: 0,
-      imgFile: "greatImg",
+      imgFile: '',
+      error: ''
     };
 
     this.uploadImage = this.uploadImage.bind(this);
@@ -17,42 +18,63 @@ class ImageUpload extends React.Component {
     this.inputUpload = this.inputUpload.bind(this);
     this.uploadImg = this.uploadImg.bind(this);
     this.copyToClipboard = this.copyToClipboard.bind(this);
+    this.changeState = this.changeState.bind(this);
   }
 
   uploadImage(e) {
     e.preventDefault();
     this.setState({
-      status: 2,
+      status: 1,
+      error: ''
     });
-    //this.uploadImg(e.dataTransfer.items[0].getAsFile());
+    this.uploadImg(e.dataTransfer.files[0]);
     e.target.classList.remove("image-uploader-active");
   }
 
   inputUpload(e) {
     this.setState({
-      status: 2,
+      status: 1,
+      error: ''
     });
-    //this.uploadImg(e.target.files[0]);
+    this.uploadImg(e.target.files[0]);
   }
 
-  uploadImg(img) {
-    console.log(img);
+  async uploadImg(img) {
     if (
       img.type === "image/png" ||
       img.type === "image/jpg" ||
       img.type === "image/jpeg" ||
       img.type === "image/gif"
     ) {
-      const formData = new FormData();
 
-      formData.append("photo", img);
+      let cloudname = config.IMAGE_CLOUD_NAME
 
-      
+      const fileForm = new FormData();
+      fileForm.append('file', img);
+      fileForm.append('upload_preset', config.IMAGE_CLOUD_PRESET);
+      fileForm.append('cloud_name', cloudname);
 
-
+      await fetch(`https://api.cloudinary.com/v1_1/${cloudname}/image/upload`, {
+        method: 'POST',
+        body: fileForm
+      })
+        .then(res => res.json())
+        .then(data => {
+          if(data.error) {
+            this.setState(() => ({
+              status: 0,
+              error: 'An Error occurred while uploading. Please try again.'
+            }));
+          }
+          this.setState(() => ({
+            status: 2,
+            imgFile: data.url
+          }));
+        })
     } else {
       this.setState(() => ({
         status: 0,
+        error: "Your File isn't a support Image Format."
       }));
     }
   }
@@ -68,7 +90,12 @@ class ImageUpload extends React.Component {
 
   copyToClipboard(e) {
     navigator.clipboard.writeText(this.state.imgFile);
-    alert("Copied the text: " + this.state.imgFile);
+  }
+
+  changeState(e) {
+    this.setState(() => ({
+      status: parseInt(e.target.attributes.state.value),
+    }));
   }
 
   render() {
@@ -77,6 +104,10 @@ class ImageUpload extends React.Component {
         <div id="card">
           {this.state.status === 0 && (
             <div>
+              {this.state.error !== '' && (
+              <div id="error-message">
+                {this.state.error}
+              </div>)}
               <h3>Upload your image</h3>
               <p>File sould be Jpeg, Png, ...</p>
 
@@ -114,6 +145,7 @@ class ImageUpload extends React.Component {
           )}
           {this.state.status === 2 && (
             <div>
+              <h6 className="back" state="0" onClick={this.changeState}><i class="fas fa-caret-left"></i> Back to Start</h6>
               <img src={Check} alt="Checkmark" width="60px" />
               <h3>Uploaded Successfully!</h3>
               <img
@@ -124,11 +156,14 @@ class ImageUpload extends React.Component {
               />
               <div id="img-link">
                 <input type="text" value={this.state.imgFile} />
-                <button class="button" onClick={this.copyToClipboard}>Copy Link</button>
+                <button className="button" onClick={this.copyToClipboard}>
+                  Copy Link
+                </button>
               </div>
             </div>
           )}
         </div>
+        <h6>Created by Lucas</h6>
       </div>
     );
   }
