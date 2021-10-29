@@ -52,7 +52,7 @@ h6 {
   margin: 20px 0;
 }
 
-input, button {
+input, .button {
   border-radius: 8px;
   font-family: Noto Sans;
   font-style: normal;
@@ -75,11 +75,12 @@ input:focus, input:active {
   outline: none;
 }
 
-button {
+.button {
   background: #2F80ED;
   color: #FFFFFF;
   white-space: nowrap;
-  cursor: pointer
+  cursor: pointer;
+  display: inline;
 }
 
 #image-uploader {
@@ -97,7 +98,7 @@ button {
   margin-top: 30px;
 }
 
-#image-uploader:hover::after {
+.image-uploader-active::after {
   content: "Drop your Image here";
   position: absolute;
   height: 100%;
@@ -108,7 +109,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .2s;
 }
 
 #image-uploader h6 {
