@@ -65,11 +65,12 @@ class ImageUpload extends React.Component {
               status: 0,
               error: 'An Error occurred while uploading. Please try again.'
             }));
-          }
+          } else {
           this.setState(() => ({
             status: 2,
             imgFile: data.url
           }));
+        }
         })
     } else {
       this.setState(() => ({
