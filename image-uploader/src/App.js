@@ -10,7 +10,7 @@ class ImageUpload extends React.Component {
     this.state = {
       status: 0,
       imgFile: '',
-      error: process.env.REACT_APP_TEST_VARIABLE
+      error: ''
     };
 
     this.uploadImage = this.uploadImage.bind(this);
