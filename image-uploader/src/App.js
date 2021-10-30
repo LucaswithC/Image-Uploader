@@ -3,7 +3,6 @@ import "./ImageUpload.css";
 import React from "react";
 import imagePlaceholder from "./images/placeholder.svg";
 import Check from "./images/ok-1976099.svg";
-import config from "./config.js"
 
 class ImageUpload extends React.Component {
   constructor(props) {
