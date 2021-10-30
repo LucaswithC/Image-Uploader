@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://musing-lumiere-af9bcb.netlify.app/">
+    <a href="https://www.figma.com/file/NxbZm3CAovYh89dFXe7EOw">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://musing-lumiere-af9bcb.netlify.app/">
       Solution
     </a>
     <span> | </span>
