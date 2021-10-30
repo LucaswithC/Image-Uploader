@@ -1,8 +1,8 @@
-require('dotenv').config()
 import "./ImageUpload.css";
 import React from "react";
 import imagePlaceholder from "./images/placeholder.svg";
 import Check from "./images/ok-1976099.svg";
+require('dotenv').config()
 
 class ImageUpload extends React.Component {
   constructor(props) {
