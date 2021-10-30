@@ -10,7 +10,7 @@ class ImageUpload extends React.Component {
     this.state = {
       status: 0,
       imgFile: '',
-      error: process.env.TEST_VARIABLE
+      error: process.env.REACT_APP_TEST_VARIABLE
     };
 
     this.uploadImage = this.uploadImage.bind(this);
@@ -48,11 +48,11 @@ class ImageUpload extends React.Component {
       img.type === "image/gif"
     ) {
 
-      let cloudname = process.env.IMAGE_CLOUD_NAME
+      let cloudname = process.env.REACT_APP_IMAGE_CLOUD_NAME
 
       const fileForm = new FormData();
       fileForm.append('file', img);
-      fileForm.append('upload_preset', process.env.IMAGE_CLOUD_PRESET);
+      fileForm.append('upload_preset', process.env.REACT_APP_IMAGE_CLOUD_PRESET);
       fileForm.append('cloud_name', cloudname);
 
       await fetch(`https://api.cloudinary.com/v1_1/${cloudname}/image/upload`, {
