@@ -10,7 +10,7 @@ class ImageUpload extends React.Component {
     this.state = {
       status: 0,
       imgFile: '',
-      error: ''
+      error: process.env.TEST_VARIABLE
     };
 
     this.uploadImage = this.uploadImage.bind(this);
@@ -100,12 +100,6 @@ class ImageUpload extends React.Component {
   }
 
   render() {
-    function envTest() {
-      this.setState(() => ({
-        error: process.env.TEST_VARIABLE
-      }))
-    }
-    envTest()
     return (
       <div id="container">
         <div id="card">
