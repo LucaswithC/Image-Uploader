@@ -1,3 +1,4 @@
+require('dotenv').config()
 import "./ImageUpload.css";
 import React from "react";
 import imagePlaceholder from "./images/placeholder.svg";
@@ -48,11 +49,11 @@ class ImageUpload extends React.Component {
       img.type === "image/gif"
     ) {
 
-      let cloudname = config.IMAGE_CLOUD_NAME
+      let cloudname = process.env.IMAGE_CLOUD_NAME
 
       const fileForm = new FormData();
       fileForm.append('file', img);
-      fileForm.append('upload_preset', config.IMAGE_CLOUD_PRESET);
+      fileForm.append('upload_preset', process.env.IMAGE_CLOUD_PRESET);
       fileForm.append('cloud_name', cloudname);
 
       await fetch(`https://api.cloudinary.com/v1_1/${cloudname}/image/upload`, {
