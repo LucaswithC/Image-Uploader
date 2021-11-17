@@ -39,12 +39,10 @@
 
 ![screenshot](https://res.cloudinary.com/dtc8u5oa0/image/upload/v1637154684/Screenshot_2021-11-17_at_14-11-07_Upload_Image_zmdp5r.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+Hello, this was my first submission for the DevChallenges and I think it came out pretty good.
+At thirst I struggled how to upload and save the Images from the Users but then I used [Cloudinary](https://cloudinary.com) with made things a lot easier.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+You can see my finished Project here: [Image Uploader](https://image-upload-lucas.netlify.app/)
 
 ### Built With
 
@@ -53,6 +51,7 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 - [React](https://reactjs.org/)
 - [Font Awesome](https://fontawesome.com/)
 - [Netlify](https://www.netlify.com/)
+- [Cloudinary](https://cloudinary.com)
 
 
 ## Features
