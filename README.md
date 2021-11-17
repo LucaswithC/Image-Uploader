@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://www.figma.com/file/NxbZm3CAovYh89dFXe7EOw">
+    <a href="https://image-upload-lucas.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://musing-lumiere-af9bcb.netlify.app/">
+    <a href="https://github.com/LucaswithC/Image-Uploader/">
       Solution
     </a>
     <span> | </span>
@@ -21,8 +21,6 @@
     </a>
   </h3>
 </div>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c8f4f069-b104-49b6-8466-9b1ae25f2c59/deploy-status)](https://app.netlify.com/sites/musing-lumiere-af9bcb/deploys)
 
 <!-- TABLE OF CONTENTS -->
 
@@ -39,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://res.cloudinary.com/dtc8u5oa0/image/upload/v1637154684/Screenshot_2021-11-17_at_14-11-07_Upload_Image_zmdp5r.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -53,11 +51,15 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
+- [Font Awesome](https://fontawesome.com/)
+- [Netlify](https://www.netlify.com/)
 
 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+
+The Purpose of the App is to upload a Image and to copy the Link so the User can access his Image anytime with the URL.
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx) was to build an application to complete the given user stories.
 
@@ -69,7 +71,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/LucaswithC/Image-Uploader
 
 # Install dependencies
 $ npm install
@@ -82,11 +84,10 @@ $ npm start
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example -->
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Node.js](https://nodejs.org/)
 - [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
 
 <!-- - Website [your-website.com](https://{your-web-site-link}) -->
-- GitHub [@your-username](https://{github.com/LucaswithC})
+- GitHub [@LucaswithC](https://{github.com/LucaswithC})
