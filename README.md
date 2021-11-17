@@ -89,4 +89,4 @@ $ npm start
 ## Contact
 
 <!-- - Website [your-website.com](https://{your-web-site-link}) -->
-- GitHub [@LucaswithC](https://{github.com/LucaswithC})
+- GitHub [@LucaswithC](https://github.com/LucaswithC)
